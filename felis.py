@@ -609,8 +609,8 @@ def load_spectrum(specfile,verbose=True):
     w, f, df, s2n = felis.load_spectrum(specfile)
 
     """
-    if verbose: print(' - Loading SPEC1D extension (spectrum) of \n   '+specfile)
-    dat = fits.open(specfile)['SPEC1D'].data
+    #if verbose: print(' - Loading SPEC1D extension (spectrum) of \n   '+specfile)
+    dat = fits.open(specfile).data
 
     wave    = dat['wave']
     flux    = dat['flux']
